@@ -50,4 +50,4 @@ async def hello(ctx):
     await ctx.send(f'Merhaba! Ben {bot.user}, bir Discord sohbet botuyum!')
 
 
-client.run("MTIzMDc4NjMwNTE5ODI2MDMxNg.G1i33_.3X79hYlaLMXSYfPVNccIHi0m64ruWQpvpRkK4c")
+client.run("TOKENİ SEN GİR :) ")
