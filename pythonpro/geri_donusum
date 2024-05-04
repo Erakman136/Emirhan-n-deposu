@@ -1,0 +1,21 @@
+import discord
+from discord.ext import commands
+import os
+import random
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.command()
+async def randommus(ctx):
+    img_list = os.listdir('M2L2/myimage')
+    img = random.choice(img_list)
+    with open(f'M2L2/myimage/{img}', 'rb') as f:
+        # Dönüştürülen Discord kütüphane dosyasını bu değişkende saklayalım!
+        picture = discord.File(f)
+   # Daha sonra bu dosyayı bir parametre olarak gönderebiliriz!
+    await ctx.send(file=picture)
+
+bot.run("")
